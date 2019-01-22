@@ -431,7 +431,7 @@ $scope.filter = function()
                                 "Debit: "+
                               "</td>"+
                               "<td width='50%' style='text-align:left; padding: 4px; border-style: none none none none; border-width:1px; font-size:10pt;'>"+
-                                "<strong>"+$scope.vend.vm_debit+"</strong>"+
+                                "<strong>"+$filter('number')($scope.vend.vm_debit,'3')+"</strong>"+
                               "</td>"+
                             "</tr>"+
                             "<tr>"+
@@ -439,7 +439,7 @@ $scope.filter = function()
                                 "Credit: "+
                               "</td>"+
                               "<td width='50%' style='text-align:left; padding: 4px; border-style: none none none none; border-width:1px; font-size:10pt;'>"+
-                                "<strong>"+$scope.vend.vm_balance+"</strong>"+
+                                "<strong>"+$filter('number')($scope.vend.vm_balance,'3')+"</strong>"+
                               "</td>"+
                             "</tr>";
                             if($('#user-datepicker-from').val() != "" && $('#user-datepicker-to').val() != "") 
@@ -450,7 +450,7 @@ $scope.filter = function()
                                   "From Date: "+
                                 "</td>"+
                                 "<td width='50%' style='text-align:left; padding: 4px; border-style: none none none none; border-width:1px; font-size:10pt;'>"+
-                                  "<strong>"+$filter('date')($scope.fDate, "mediumDate")+"</strong>"+
+                                  "<strong>"+$filter('date')($scope.fDate, "dd-MM-yyyy")+"</strong>"+
                                 "</td>"+
                               "</tr>"+
                               "<tr>"+
@@ -458,7 +458,7 @@ $scope.filter = function()
                                   "To Date: "+
                                 "</td>"+
                                 "<td width='50%' style='text-align:left; padding: 4px; border-style: none none none none; border-width:1px; font-size:10pt;'>"+
-                                  "<strong>"+$filter('date')($scope.tDate, "mediumDate")+"</strong>"+
+                                  "<strong>"+$filter('date')($scope.tDate, "dd-MM-yyyy")+"</strong>"+
                                 "</td>"+
                               "</tr>";
                             }
