@@ -48,7 +48,7 @@ angular.module('dailyexpense').controller('dailyexpenseEditCtrl', function ($roo
           method: 'GET',
           url: $scope.apiURL,
           headers: {'Content-Type': 'application/json',
-                  'Authorization' :'Bearer '+localStorage.getItem("amkenterprises_admin_access_token")}
+                  'Authorization' :'Bearer '+localStorage.getItem("vilaspetroleum_admin_access_token")}
         })
         .success(function(expense)
         {
@@ -64,7 +64,7 @@ angular.module('dailyexpense').controller('dailyexpenseEditCtrl', function ($roo
                   url: $rootScope.baseURL+'/expensetype/'+value.etm_id,
                   //data: $scope.data,
                   headers: {'Content-Type': 'application/json',
-                          'Authorization' :'Bearer '+localStorage.getItem("amkenterprises_admin_access_token")}
+                          'Authorization' :'Bearer '+localStorage.getItem("vilaspetroleum_admin_access_token")}
                 })
                 .success(function(selectedProductList)
                 {
@@ -103,7 +103,7 @@ angular.module('dailyexpense').controller('dailyexpenseEditCtrl', function ($roo
         const httpOptions = {
           headers: {
             'Content-Type':  'application/json',
-            'Authorization': 'Bearer '+localStorage.getItem("amkenterprises_admin_access_token")
+            'Authorization': 'Bearer '+localStorage.getItem("vilaspetroleum_admin_access_token")
           }
         };
         return $http.post($rootScope.baseURL+'/expensetype/typeahead/search', searchTerms, httpOptions).then((result) => {
@@ -214,7 +214,7 @@ angular.module('dailyexpense').controller('dailyexpenseEditCtrl', function ($roo
     	      url: $scope.apiURL,
     	      data: $scope.expense,
     	      headers: {'Content-Type': 'application/json',
-                      'Authorization' :'Bearer '+localStorage.getItem("amkenterprises_admin_access_token")}
+                      'Authorization' :'Bearer '+localStorage.getItem("vilaspetroleum_admin_access_token")}
     	    })
     	    .success(function(login)
     	    {

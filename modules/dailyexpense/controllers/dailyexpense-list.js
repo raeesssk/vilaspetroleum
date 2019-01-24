@@ -30,7 +30,7 @@ $scope.apiURL = $rootScope.baseURL+'/dailyexpense/dailyexpense/total';
         url: $scope.apiURL,
         data:$scope.limit,
         headers: {'Content-Type': 'application/json',
-                  'Authorization' :'Bearer '+localStorage.getItem("amkenterprises_admin_access_token")}
+                  'Authorization' :'Bearer '+localStorage.getItem("vilaspetroleum_admin_access_token")}
       })
       .success(function(category)
       {
@@ -77,7 +77,7 @@ $scope.apiURL = $rootScope.baseURL+'/dailyexpense/dailyexpense/total';
                 url: $rootScope.baseURL+'/dailyexpense/dailyexpense/limit',
                 data: $scope.limit,
                 headers: {'Content-Type': 'application/json',
-                          'Authorization' :'Bearer '+localStorage.getItem("amkenterprises_admin_access_token")}
+                          'Authorization' :'Bearer '+localStorage.getItem("vilaspetroleum_admin_access_token")}
               })
               .success(function(dailyexpense)
               {
@@ -125,7 +125,7 @@ $scope.apiURL = $rootScope.baseURL+'/dailyexpense/dailyexpense/total';
 	      url: $rootScope.baseURL+'/dailyexpense/delete/'+$scope.dem_id,
         // data: $scope.em_id,
 	      headers: {'Content-Type': 'application/json',
-                  'Authorization' :'Bearer '+localStorage.getItem("amkenterprises_admin_access_token")}
+                  'Authorization' :'Bearer '+localStorage.getItem("vilaspetroleum_admin_access_token")}
 	    })
 	    .success(function(customerObj)
 	    {

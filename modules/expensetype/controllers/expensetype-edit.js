@@ -15,7 +15,7 @@ angular.module('expensetype').controller('expensetypeEditCtrl', function ($rootS
 	      url: $rootScope.baseURL+'/expensetype/'+$scope.etmId,
 	      // data: $scope.employee,
 	      headers: {'Content-Type': 'application/json',
-                  'Authorization' :'Bearer '+localStorage.getItem("amkenterprises_admin_access_token")}
+                  'Authorization' :'Bearer '+localStorage.getItem("vilaspetroleum_admin_access_token")}
 	    })
 	    .success(function(expensetype)
 	    {
@@ -57,7 +57,7 @@ angular.module('expensetype').controller('expensetypeEditCtrl', function ($rootS
 		      url: $scope.apiURL,
 		      data: $scope.expensetype,
 		      headers: {'Content-Type': 'application/json',
-	                  'Authorization' :'Bearer '+localStorage.getItem("amkenterprises_admin_access_token")}
+	                  'Authorization' :'Bearer '+localStorage.getItem("vilaspetroleum_admin_access_token")}
 		    })
 		    .success(function(login)
 		    {

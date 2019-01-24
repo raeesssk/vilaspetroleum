@@ -31,7 +31,7 @@ angular.module('expensetype').controller('expensetypeCtrl', function ($rootScope
         url: $scope.apiURL,
         data:$scope.limit,
         headers: {'Content-Type': 'application/json',
-                  'Authorization' :'Bearer '+localStorage.getItem("amkenterprises_admin_access_token")}
+                  'Authorization' :'Bearer '+localStorage.getItem("vilaspetroleum_admin_access_token")}
       })
       .success(function(category)
       {
@@ -78,7 +78,7 @@ angular.module('expensetype').controller('expensetypeCtrl', function ($rootScope
                 url: $rootScope.baseURL+'/expensetype/expensetype/limit',
                 data: $scope.limit,
                 headers: {'Content-Type': 'application/json',
-                          'Authorization' :'Bearer '+localStorage.getItem("amkenterprises_admin_access_token")}
+                          'Authorization' :'Bearer '+localStorage.getItem("vilaspetroleum_admin_access_token")}
               })
               .success(function(expensetype)
               {
@@ -128,7 +128,7 @@ angular.module('expensetype').controller('expensetypeCtrl', function ($rootScope
 	      method: 'POST',
 	      url: $rootScope.baseURL+'/expensetype/delete/'+$scope.etm_id,
 	      headers: {'Content-Type': 'application/json',
-                  'Authorization' :'Bearer '+localStorage.getItem("amkenterprises_admin_access_token")}
+                  'Authorization' :'Bearer '+localStorage.getItem("vilaspetroleum_admin_access_token")}
 	    })
 	    .success(function(customerObj)
 	    {
